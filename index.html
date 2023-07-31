@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bai tap js buoi 7 8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="item-container p-5">
+        <!-- input  -->
+        <div class="card">
+          <div class="card-header text-danger text-center">NHẬP CHUỖI</div>
+          <div class="card-body">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control w-50"
+                id="input-array"
+                placeholder="Nhập số N"
+              />
+              <button class="btn btn-success pl-2 ml-2" onclick="addNumber()">Thêm Số</button>
+            </div>
+            <div class="card-body alert alert-success mt-3">
+              <i class="fa-solid fa-star" style="color: #187fd3"></i>
+              <span id="result-array"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Array Function  -->
+        <div class="accordion" id="accordion52376045">
+          <div class="card">
+            <div class="card-header" id="header-0">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light h-100 w-100 text-left"
+                  data-toggle="collapse"
+                  data-target="#panel25082825"
+                  aria-expanded="false"
+                  aria-controls="header-0"
+                >
+                  1. Tổng các số dương trong mảng
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel25082825"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button type="submit" class="btn btn-success mb-2 pl-2 ml-2" onclick="sum()">
+                  Tính Tổng
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-sum"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-1">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel20481697"
+                  aria-expanded="false"
+                  aria-controls="header-1"
+                >
+                  2. Đếm có bao nhiêu số dương trong mảng
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel20481697"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="countNumber()"
+                >
+                  Đếm số
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-count"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-2">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel95292133"
+                  aria-expanded="false"
+                  aria-controls="header-2"
+                >
+                  3. Tìm số nhỏ nhất trong mảng
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel95292133"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="findSmallestNumber()"
+                >
+                  Tìm số
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-smallest-number"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-3">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel67460243"
+                  aria-expanded="false"
+                  aria-controls="header-3"
+                >
+                  4. Tìm số dương nhỏ nhất trong mảng
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel67460243"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="findSmallestPositiveNumber()"
+                >
+                  Tìm số
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-smallest-positive-number"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-4">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel50336204"
+                  aria-expanded="false"
+                  aria-controls="header-4"
+                >
+                  5. Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel50336204"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="findLastEven()"
+                >
+                  Tìm số
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-last-even"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-5">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel74334449"
+                  aria-expanded="false"
+                  aria-controls="header-5"
+                >
+                  6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ
+                  giá trị)
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel74334449"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="findLastEven()"
+                >
+                  Đổi chỗ
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-last-even"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-6">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel12345678"
+                  aria-expanded="false"
+                  aria-controls="header-6"
+                >
+                  7. Sắp xếp mảng theo thứ tự tăng dần.
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel12345678"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">
+                <button type="submit" class="btn btn-success mb-2 pl-2 ml-2" onclick="sortArray()">
+                  Đổi chỗ
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-sort"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-7">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel16659061"
+                  aria-expanded="false"
+                  aria-controls="header-7"
+                >
+                  8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về
+                  – 1
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel16659061"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-8">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel33722373"
+                  aria-expanded="false"
+                  aria-controls="header-8"
+                >
+                  9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel33722373"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="header-9">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-outline-light w-100 h-100 text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#panel71990868"
+                  aria-expanded="false"
+                  aria-controls="header-9"
+                >
+                  10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn
+                </button>
+              </h2>
+            </div>
+            <div
+              id="panel71990868"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion52376045"
+            >
+              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
