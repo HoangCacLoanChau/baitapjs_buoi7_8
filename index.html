@@ -280,7 +280,7 @@
             </div>
             <div
               id="panel12345678"
-              class="collapse show"
+              class="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
@@ -317,7 +317,19 @@
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
-              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="findPrimeNumber()"
+                >
+                  Tìm Số
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-prime"></span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -365,7 +377,19 @@
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
-              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+              <div class="card-body">
+                <button
+                  type="submit"
+                  class="btn btn-success mb-2 pl-2 ml-2"
+                  onclick="comparePosNeg()"
+                >
+                  So sánh
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-compare"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
