@@ -42,10 +42,15 @@ function countNumber(){
 }
 //bai 3
 function findSmallestNumber(){
-    var smallest = 0;
+    var smallest = numberArray[0];
     var result = document.getElementById("result-smallest-number");
-    numberArray.sort(function(a,b) { return a - b } );
-    smallest= numberArray[0];
+    numberArray.forEach(e => {
+        if(smallest>e){
+            smallest = e;
+        }
+    });
+    // numberArray.sort(function(a,b) { return a - b } );
+    // smallest= numberArray[0];
     result.innerHTML= `Số nhỏ nhất trong mảng: ${smallest}`;
 }
 //bai 4
@@ -93,8 +98,6 @@ function swapNumber(){
        var t = numberArray[swapOne];
         numberArray[swapOne] = numberArray[swapTwo] ;
         numberArray[swapTwo] = t;
-        console.log("🚀 ~ swapNumber ~ numberArray:", numberArray)
-
     result.innerHTML=` chuỗi sau khi đổi chỗ: ${numberArray}`
 }
 //bai 7
