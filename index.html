@@ -236,7 +236,7 @@
             </div>
             <div
               id="panel74334449"
-              class="collapse show"
+              class="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
@@ -347,11 +347,30 @@
             </div>
             <div
               id="panel33722373"
-              class="collapse"
+              class="collapse show"
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
-              <div class="card-body">Lorem ipsum dolor sit amet.</div>
+              <div class="card-body">
+                <input
+                  type="number"
+                  class="form-control w-50"
+                  id="input-real-array"
+                  placeholder="Nhập số thực"
+                />
+                <button class="btn btn-success pl-2 ml-2" onclick="addRealNumber()">Thêm Số</button>
+                <div class="alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="real-number-array"></span>
+                </div>
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="findRealNumber()">
+                  Tìm số nguyên
+                </button>
+                <div class="card-body alert alert-success mt-3">
+                  <i class="fa-solid fa-star" style="color: #187fd3"></i>
+                  <span id="result-real"></span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card">

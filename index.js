@@ -88,9 +88,7 @@ function findLastEven(){
 //bai 6
 function swapNumber(){
    var swapOne=document.getElementById("swap-1").value;
-   console.log("🚀 ~ swapNumber ~ swapOne:", swapOne)
    var swapTwo=document.getElementById("swap-2").value;
-   console.log("🚀 ~ swapNumber ~ swapTwo:", swapTwo)
    var t;
     var result = document.getElementById("result-swap");
     for(var i=0 ; i < numberArray.length; i++){
@@ -105,7 +103,6 @@ function swapNumber(){
 function sortArray(){
     var result = document.getElementById("result-sort");
     var sortedArray=numberArray.sort(function(a,b) { return a - b } );
-    console.log(sortArray);
     result.innerHTML= `Mảng tăng dần: ${sortedArray}`;
 }
 //bai 8
@@ -122,7 +119,6 @@ function findPrimeNumber(){
         }
     });
     if(primeArray.length>0){
-        console.log(primeArray[0]);
         result.innerHTML= `Số nguyên tố đầu tiên: ${primeArray[0]}`;
 
     }
@@ -131,6 +127,25 @@ function findPrimeNumber(){
     }
 }
 //bai 9
+realArray = [];
+var resultRealArray=  document.getElementById("real-number-array");
+function addRealNumber(){
+    var number = document.getElementById("input-real-array").value*1;
+    realArray.push(number);
+    resultRealArray.innerHTML = realArray;
+}
+function findRealNumber(){
+    countReal = 0;
+    result =document.getElementById("result-real");
+    realArray.forEach(element => {
+        if(Number.isInteger(element)){
+            countReal++;
+        }
+    });
+    result.innerHTML = `Số nguyên: ${countReal}`;
+    console.log(countReal);
+}
+
 //bai 10
 function comparePosNeg(){
     var result = document.getElementById("result-compare");
