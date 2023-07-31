@@ -87,16 +87,14 @@ function findLastEven(){
 }
 //bai 6
 function swapNumber(){
-   var swapOne=document.getElementById("swap-1").value;
-   var swapTwo=document.getElementById("swap-2").value;
-   var t;
+   var swapOne=document.getElementById("swap-1").value*1;
+   var swapTwo=document.getElementById("swap-2").value*1;
     var result = document.getElementById("result-swap");
-    for(var i=0 ; i < numberArray.length; i++){
-        t = numberArray[swapOne] ;
+       var t = numberArray[swapOne];
         numberArray[swapOne] = numberArray[swapTwo] ;
         numberArray[swapTwo] = t;
+        console.log("🚀 ~ swapNumber ~ numberArray:", numberArray)
 
-    }
     result.innerHTML=` chuỗi sau khi đổi chỗ: ${numberArray}`
 }
 //bai 7
@@ -106,25 +104,60 @@ function sortArray(){
     result.innerHTML= `Mảng tăng dần: ${sortedArray}`;
 }
 //bai 8
+function isPrime(n) {
+    for (var i = 2; i <= Math.sqrt(n); i++){
+        if (n % i == 0 || n< 2){
+            return false;
+        }else{
+            return true;
+        }
+        
+    }
+}
+function isPrime(number){
+    let isPrime = true;
+// check if number is equal to 1
+if (number <= 1) {
+    isPrime= false;
+}
+// check if number is greater than 1
+else if (number > 1) {
+    // looping through 2 to number-1
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+        else{
+            isPrime = true;
+        }
+    }
+}
+    return isPrime;
+
+}
 function findPrimeNumber(){
     var result = document.getElementById("result-prime");
-    var primeArray = [];
-    numberArray.forEach(e => {
-        for(var i = 2; i <= e; i++){
-            if( e % i == 0 && e>1 ){
-                return -1;
-            }else{
-                primeArray.push(e);
-            }
+    var n =-1;
+    // var primeArray=[];
+    for (i=0;i< numberArray.length;i++){
+        if(isPrime(numberArray[i])){
+            n = numberArray[i];
+            break;
         }
-    });
-    if(primeArray.length>0){
-        result.innerHTML= `Số nguyên tố đầu tiên: ${primeArray[0]}`;
+    }
+    n == -1 ? result.innerHTML = `không có số nguyên tố`:result.innerHTML = `Số nguyên tố đầu tiên: ${n}`;
+    console.log(numberArray);
+    console.log(n);
 
-    }
-    else{
-        result.innerHTML= `Không có số nguyên tố: -1`
-    }
+    // if(primeArray.length>0){
+    // result.innerHTML = `Số nguyên tố đầu tiên: ${primeArray[0]}`;
+    // }else{
+    //     result.innerHTML = `không có số nguyên tố`;
+    //     return -1;
+    // }
+
+
 }
 //bai 9
 realArray = [];
