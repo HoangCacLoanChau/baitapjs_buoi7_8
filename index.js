@@ -86,7 +86,21 @@ function findLastEven(){
 
 }
 //bai 6
+function swapNumber(){
+   var swapOne=document.getElementById("swap-1").value;
+   console.log("🚀 ~ swapNumber ~ swapOne:", swapOne)
+   var swapTwo=document.getElementById("swap-2").value;
+   console.log("🚀 ~ swapNumber ~ swapTwo:", swapTwo)
+   var t;
+    var result = document.getElementById("result-swap");
+    for(var i=0 ; i < numberArray.length; i++){
+        t = numberArray[swapOne] ;
+        numberArray[swapOne] = numberArray[swapTwo] ;
+        numberArray[swapTwo] = t;
 
+    }
+    result.innerHTML=` chuỗi sau khi đổi chỗ: ${numberArray}`
+}
 //bai 7
 function sortArray(){
     var result = document.getElementById("result-sort");

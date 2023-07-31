@@ -33,3 +33,9 @@ body{
     display: flex;
     align-items: center;
 }
+
+.swap{
+    display: flex;
+    gap: 20px;
+    width: 40%;
+}

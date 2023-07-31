@@ -72,7 +72,7 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button type="submit" class="btn btn-success mb-2 pl-2 ml-2" onclick="sum()">
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="sum()">
                   Tính Tổng
                 </button>
                 <div class="card-body alert alert-success mt-3">
@@ -104,11 +104,7 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button
-                  type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
-                  onclick="countNumber()"
-                >
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="countNumber()">
                   Đếm số
                 </button>
                 <div class="card-body alert alert-success mt-3">
@@ -142,7 +138,7 @@
               <div class="card-body">
                 <button
                   type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
+                  class="btn btn-success mb-2 pl-2"
                   onclick="findSmallestNumber()"
                 >
                   Tìm số
@@ -178,7 +174,7 @@
               <div class="card-body">
                 <button
                   type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
+                  class="btn btn-success mb-2 pl-2"
                   onclick="findSmallestPositiveNumber()"
                 >
                   Tìm số
@@ -212,11 +208,7 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button
-                  type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
-                  onclick="findLastEven()"
-                >
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="findLastEven()">
                   Tìm số
                 </button>
                 <div class="card-body alert alert-success mt-3">
@@ -244,21 +236,31 @@
             </div>
             <div
               id="panel74334449"
-              class="collapse"
+              class="collapse show"
               aria-labelledby="headingOne"
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button
-                  type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
-                  onclick="findLastEven()"
-                >
+                <div class="swap pb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="swap-1"
+                    placeholder="Nhập vị trí thứ nhất"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="swap-2"
+                    placeholder="Nhập vị trí thứ hai"
+                  />
+                </div>
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="swapNumber()">
                   Đổi chỗ
                 </button>
                 <div class="card-body alert alert-success mt-3">
                   <i class="fa-solid fa-star" style="color: #187fd3"></i>
-                  <span id="result-last-even"></span>
+                  <span id="result-swap"></span>
                 </div>
               </div>
             </div>
@@ -285,8 +287,8 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button type="submit" class="btn btn-success mb-2 pl-2 ml-2" onclick="sortArray()">
-                  Đổi chỗ
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="sortArray()">
+                  Sắp xếp
                 </button>
                 <div class="card-body alert alert-success mt-3">
                   <i class="fa-solid fa-star" style="color: #187fd3"></i>
@@ -318,11 +320,7 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button
-                  type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
-                  onclick="findPrimeNumber()"
-                >
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="findPrimeNumber()">
                   Tìm Số
                 </button>
                 <div class="card-body alert alert-success mt-3">
@@ -378,11 +376,7 @@
               data-parent="#accordion52376045"
             >
               <div class="card-body">
-                <button
-                  type="submit"
-                  class="btn btn-success mb-2 pl-2 ml-2"
-                  onclick="comparePosNeg()"
-                >
+                <button type="submit" class="btn btn-success mb-2 pl-2" onclick="comparePosNeg()">
                   So sánh
                 </button>
                 <div class="card-body alert alert-success mt-3">
